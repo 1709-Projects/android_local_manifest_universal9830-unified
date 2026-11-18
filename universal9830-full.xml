@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="github" fetch="https://github.com/" />
+  <remote name="1709" fetch="https://github.com/1709-Projects/" />
+  <default remote="github" revision="lineage-24.0" sync-j="4" />
+
+  <!-- Kernel (managed separately, not part of the unified userspace trees) -->
+  <project name="N1709/android_kernel_samsung_universal9830-backport"
+           path="kernel/samsung/universal9830"
+           revision="6.18y-backport" />
+
+  <!-- Unified device tree + vendor tree: one image for the whole family -->
+  <project name="android_device_samsung_universal9830-unified"
+           path="device/samsung/universal9830"
+           remote="1709" revision="lineage-24.0" />
+  <project name="proprietary_vendor_samsung_universal9830-unified"
+           path="vendor/samsung/universal9830"
+           remote="1709" revision="lineage-24.0" />
+
+  <!-- Samsung / Exynos platform -->
+  <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" />
+  <project name="LineageOS/android_hardware_nxp_uwb" path="hardware/nxp/uwb" />
+  <project name="LineageOS/android_hardware_samsung_slsi_nfc" path="hardware/samsung_slsi/nfc" />
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_config" path="hardware/samsung_slsi-linaro/config" />
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_exynos" path="hardware/samsung_slsi-linaro/exynos" />
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_exynos5" path="hardware/samsung_slsi-linaro/exynos5" />
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_graphics" path="hardware/samsung_slsi-linaro/graphics" />
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_interfaces" path="hardware/samsung_slsi-linaro/interfaces" />
+  <project name="LineageOS/android_hardware_samsung_slsi-linaro_openmax" path="hardware/samsung_slsi-linaro/openmax" />
+
+  <project name="LineageOS/android_device_samsung_slsi_sepolicy" path="device/samsung_slsi/sepolicy" />
+</manifest>
